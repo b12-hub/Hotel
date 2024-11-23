@@ -14,5 +14,24 @@
         "last_name": "Kurbanov",
         "email": "alex12883@gmail.com",
         "password": "import123"
+    },
+    {
+        "id": 3,
+        "username": "jhondoe",
+        "first_name": "Jhon",
+        "last_name": "Doe",
+        "email": "jhon12883@gmail.com",
+        "password": "import123",
+        "user_type": "guest",
+        "bookings": 1
+    },
+    {
+        "id": 4,
+        "username": "jhondoe2",
+        "first_name": "Jhon2",
+        "last_name": "Doe2",
+        "email": "jhon122883@gmail.com",
+        "password": "import123",
+        "user_type": "director"
     }
 ]

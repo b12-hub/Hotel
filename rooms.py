@@ -1,4 +1,4 @@
-from data import save_data_to_file, load_data_from_file
+from data import save_data_to_file, load_data_from_file, update_data, delete_data
 
 
 def add_room(room_type: str, count: int):
@@ -15,6 +15,7 @@ def add_room(room_type: str, count: int):
 		"type": "standard_single_room",
 		"status": 0,
 		"floor": 1,
+
 	}
 
 	if load_data_from_file(file_name="rooms", param_key='id') is not None:
@@ -52,9 +53,19 @@ def add_room(room_type: str, count: int):
 # 		load_data_from_file("rooms", param_key='status', param_value=status)
 
 
-def update_room_status(id, status, user_id):
-	pass
+def update_room_status(room_id):
+	room = load_data_from_file(file_name="rooms", param_key='id', param_value=room_id)
+	if room["status"] == 0:
+		update_data(file_name="rooms", obj_id=room_id, param_key='status', new_param_value=1)
+		return "Room Status Updated Successfully"
+	else:
+		update_data(file_name="rooms", obj_id=room_id, param_key='status', new_param_value=0)
+		return "Room Status Updated Successfully"
 
 
-def delete_room(number):
-	pass
+
+def delete_room(room_id):
+	delete_data(file_name="rooms", param_key='id', param_value=room_id)
+
+
+# print(delete_room(1))

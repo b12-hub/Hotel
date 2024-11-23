@@ -1,240 +1,444 @@
 [
     {
         "id": 1,
-        "type": "standard_single_room",
+        "type": "standard_double_room",
         "status": 0,
         "floor": 1
     },
     {
         "id": 2,
-        "type": "standard_single_room",
-        "status": 0,
-        "floor": 1
-    },
-    {
-        "id": 3,
-        "type": "standard_single_room",
-        "status": 0,
+        "type": "standard_double_room",
+        "status": 1,
         "floor": 1
     },
     {
         "id": 4,
-        "type": "standard_single_room",
+        "type": "standard_double_room",
         "status": 0,
         "floor": 1
     },
     {
         "id": 5,
-        "type": "standard_single_room",
-        "status": 1,
+        "type": "standard_double_room",
+        "status": 0,
         "floor": 1
     },
     {
         "id": 6,
-        "type": "standard_single_room",
+        "type": "standard_double_room",
         "status": 0,
         "floor": 1
     },
     {
         "id": 7,
-        "type": "standard_single_room",
+        "type": "standard_double_room",
         "status": 0,
         "floor": 1
     },
     {
         "id": 8,
-        "type": "standard_single_room",
+        "type": "standard_double_room",
         "status": 0,
         "floor": 1
     },
     {
         "id": 9,
-        "type": "standard_single_room",
+        "type": "standard_double_room",
         "status": 0,
         "floor": 1
     },
     {
         "id": 10,
-        "type": "standard_single_room",
+        "type": "standard_double_room",
         "status": 0,
         "floor": 1
     },
     {
         "id": 11,
-        "type": "deluxe_single_room",
+        "type": "standard_double_room",
         "status": 0,
-        "floor": 2
+        "floor": 1
     },
     {
         "id": 12,
-        "type": "deluxe_single_room",
+        "type": "standard_double_room",
         "status": 0,
-        "floor": 2
+        "floor": 1
     },
     {
         "id": 13,
-        "type": "deluxe_single_room",
+        "type": "standard_double_room",
         "status": 0,
-        "floor": 2
+        "floor": 1
     },
     {
         "id": 14,
-        "type": "deluxe_single_room",
+        "type": "standard_double_room",
         "status": 0,
-        "floor": 2
+        "floor": 1
     },
     {
         "id": 15,
-        "type": "deluxe_single_room",
+        "type": "standard_double_room",
         "status": 0,
-        "floor": 2
+        "floor": 1
     },
     {
         "id": 16,
-        "type": "presidential_room",
+        "type": "standard_single_room",
         "status": 0,
-        "floor": 3
+        "floor": 1
     },
     {
         "id": 17,
-        "type": "presidential_room",
+        "type": "standard_single_room",
         "status": 0,
-        "floor": 3
+        "floor": 1
     },
     {
         "id": 18,
-        "type": "presidential_room",
+        "type": "standard_single_room",
         "status": 0,
-        "floor": 3
+        "floor": 1
     },
     {
         "id": 19,
-        "type": "presidential_room",
+        "type": "standard_single_room",
         "status": 0,
-        "floor": 3
+        "floor": 1
     },
     {
         "id": 20,
-        "type": "presidential_room",
+        "type": "standard_single_room",
         "status": 0,
-        "floor": 3
+        "floor": 1
     },
     {
         "id": 21,
-        "type": "standard_double_room",
+        "type": "standard_single_room",
         "status": 0,
         "floor": 1
     },
     {
         "id": 22,
-        "type": "standard_double_room",
+        "type": "standard_single_room",
         "status": 0,
         "floor": 1
     },
     {
         "id": 23,
-        "type": "standard_double_room",
+        "type": "standard_single_room",
         "status": 0,
         "floor": 1
     },
     {
         "id": 24,
-        "type": "standard_double_room",
+        "type": "standard_single_room",
         "status": 0,
         "floor": 1
     },
     {
         "id": 25,
-        "type": "standard_double_room",
+        "type": "standard_single_room",
         "status": 0,
         "floor": 1
     },
     {
         "id": 26,
-        "type": "deluxe_double_room",
+        "type": "standard_single_room",
         "status": 0,
-        "floor": 2
+        "floor": 1
     },
     {
         "id": 27,
-        "type": "deluxe_double_room",
+        "type": "standard_single_room",
         "status": 0,
-        "floor": 2
+        "floor": 1
     },
     {
         "id": 28,
-        "type": "deluxe_double_room",
+        "type": "standard_single_room",
         "status": 0,
-        "floor": 2
+        "floor": 1
     },
     {
         "id": 29,
-        "type": "deluxe_double_room",
+        "type": "standard_single_room",
         "status": 0,
-        "floor": 2
+        "floor": 1
     },
     {
         "id": 30,
+        "type": "standard_single_room",
+        "status": 0,
+        "floor": 1
+    },
+    {
+        "id": 31,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 32,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 33,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 34,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 35,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 36,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 37,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 38,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 39,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 40,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 41,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 42,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 43,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 44,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 45,
+        "type": "deluxe_single_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 46,
         "type": "deluxe_double_room",
         "status": 0,
         "floor": 2
     },
     {
-        "id": 31,
+        "id": 47,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 48,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 49,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 50,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 51,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 52,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 53,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 54,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 55,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 56,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 57,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 58,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 59,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 60,
+        "type": "deluxe_double_room",
+        "status": 0,
+        "floor": 2
+    },
+    {
+        "id": 61,
         "type": "presidential_room",
         "status": 0,
         "floor": 3
     },
     {
-        "id": 32,
+        "id": 62,
         "type": "presidential_room",
         "status": 0,
         "floor": 3
     },
     {
-        "id": 33,
+        "id": 63,
         "type": "presidential_room",
         "status": 0,
         "floor": 3
     },
     {
-        "id": 34,
+        "id": 64,
         "type": "presidential_room",
         "status": 0,
         "floor": 3
     },
     {
-        "id": 35,
+        "id": 65,
         "type": "presidential_room",
         "status": 0,
         "floor": 3
     },
     {
-        "id": 36,
+        "id": 66,
         "type": "presidential_room",
         "status": 0,
         "floor": 3
     },
     {
-        "id": 37,
+        "id": 67,
         "type": "presidential_room",
         "status": 0,
         "floor": 3
     },
     {
-        "id": 38,
+        "id": 68,
         "type": "presidential_room",
         "status": 0,
         "floor": 3
     },
     {
-        "id": 39,
+        "id": 69,
         "type": "presidential_room",
         "status": 0,
         "floor": 3
     },
     {
-        "id": 40,
+        "id": 70,
+        "type": "presidential_room",
+        "status": 0,
+        "floor": 3
+    },
+    {
+        "id": 71,
+        "type": "presidential_room",
+        "status": 0,
+        "floor": 3
+    },
+    {
+        "id": 72,
+        "type": "presidential_room",
+        "status": 0,
+        "floor": 3
+    },
+    {
+        "id": 73,
+        "type": "presidential_room",
+        "status": 0,
+        "floor": 3
+    },
+    {
+        "id": 74,
+        "type": "presidential_room",
+        "status": 0,
+        "floor": 3
+    },
+    {
+        "id": 75,
         "type": "presidential_room",
         "status": 0,
         "floor": 3

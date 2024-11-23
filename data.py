@@ -41,8 +41,10 @@ def load_data_from_file(file_name: str, param_key: str, param_value=0, quantity=
 		return data
 
 	if param_key == 'id' and not param_value:
-		return data[-1]['id']
-
+		if data:
+			return data[-1]['id']
+		else:
+			return 0
 	if quantity == 1:
 		for i in data:
 			if i.get(param_key) == param_value:
@@ -58,12 +60,12 @@ def load_data_from_file(file_name: str, param_key: str, param_value=0, quantity=
 	return None
 
 
-def update_data(file_name: str, id, param_key: str, new_param_value):
+def update_data(file_name: str, obj_id:int, param_key: str, new_param_value):
 	"""
 	Обновляет параметр `status` объекта с заданным `id` в JSON-файле.
 
 	:param file_name: Имя файла JSON, где хранятся данные.
-	:param id: ID объекта, у которого нужно изменить статус.
+	:param obj_id: ID объекта, у которого нужно изменить статус.
 	:param param_key: Параметр объекта которого нужно изменить.
 	:param new_param_value: Новое значение для параметра `status`.
 	"""
@@ -75,22 +77,23 @@ def update_data(file_name: str, id, param_key: str, new_param_value):
 
 		# Проходим по объектам и ищем нужный ID
 		for obj in data:
-			if obj.get(param_key):
-				if obj['id'] == id:
+			if obj['id'] == obj_id:
+				if obj.get(param_key) is not None:
 					obj[param_key] = new_param_value
 					break
-			else:
-				print(f"Key {param_key} not found.")
-				return
+				else:
+					print(obj.get(param_key))
+					print(f"Key {param_key} not found.")
+					return
 		else:
-			print(f"Объект с ID {id} не найден.")
+			print(f"Объект с ID {obj_id} не найден.")
 			return
 
 		# Сохраняем изменения обратно в файл
 		with open(file_path, 'w') as file:
 			json.dump(data, file, indent=4)
 
-		print(f"Параметр {param_key} объекта с ID {id} успешно обновлён на {new_param_value}.")
+		return f"Параметр {param_key} объекта с ID {obj_id} успешно обновлён на {new_param_value}."
 
 	except FileNotFoundError:
 		print(f"Файл {file_name} не найден.")
@@ -100,7 +103,7 @@ def update_data(file_name: str, id, param_key: str, new_param_value):
 		print(f"Произошла ошибка: {e}")
 
 
-def delete_data(file_name: str, param_key: str, param_value):
+def delete_data(file_name: str, param_key: str, param_value=-1):
 	"""
 	Обновляет параметр `status` объекта с заданным `id` в JSON-файле.
 
@@ -115,14 +118,23 @@ def delete_data(file_name: str, param_key: str, param_value):
 		with open(file_path, 'r') as file:
 			data = json.load(file)
 
+		# Определяем длину списка до удаления
+		initial_length = len(data)
 
-		for obj in data:
-			if obj.get(param_key) == param_value:
-				del obj
+		if param_key == 'all':
+			data = []
 
-		# else:
-		# 	print(f"Объект с Parametr key {id} не найден.")
-		# 	return
+			with open(file_path, 'w') as file:
+				json.dump(data, file, indent=4)
+
+			print(f"Удалены все данные с файла {file_name + '.json'}")
+			return
+		# Фильтруем список, исключая объект с указанным parametr
+		data = [obj for obj in data if obj[param_key] != param_value]
+
+		if len(data) == initial_length:
+			print(f"Объект с параметром {param_key} равных на {param_value} не найден.")
+			return
 
 		# Сохраняем изменения обратно в файл
 		with open(file_path, 'w') as file:
@@ -137,13 +149,4 @@ def delete_data(file_name: str, param_key: str, param_value):
 	except Exception as e:
 		print(f"Произошла ошибка: {e}")
 
-# save_data_to_file(data={
-#     'id': 2,
-#     'username': "alex",
-#     'first_name': "Alex",
-#     'last_name': "Johnson",
-#     'email': "alex@gmail.com",
-#     'password': "securepassword123",
-# }, path='users')
 
-# print(load_data_from_file(file_name='users', param_key='id',))
