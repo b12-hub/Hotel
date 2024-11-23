@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "username": "helloworld1",
+        "first_name": "Shava",
+        "last_name": "Kurbanov",
+        "email": "alex123@gmail.com",
+        "password": "import123"
+    },
+    {
+        "id": 2,
+        "username": "helloworld",
+        "first_name": "Shavkat",
+        "last_name": "Kurbanov",
+        "email": "alex12883@gmail.com",
+        "password": "import123"
+    }
+]
