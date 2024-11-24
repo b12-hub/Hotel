@@ -1,14 +1,15 @@
 from data import save_data_to_file, load_data_from_file, update_data, delete_data
 
+room_types = {
+	"standard_single_room": "Standard Single room",
+	"standard_double_room": "Standard Double room",
+	"deluxe_single_room": "Deluxe Single room",
+	"deluxe_double_room": "Deluxe Double room",
+	"presidential_room": "Presidential room",
+}
 
 def add_room(room_type: str, count: int):
-	room_types = {
-		"standard_single_room": "Standard Single room",
-		"standard_double_room": "Standard Double room",
-		"deluxe_single_room": "Deluxe Single room",
-		"deluxe_double_room": "Deluxe Double room",
-		"presidential_room": "Presidential room",
-	}
+
 
 	room = {
 		"id": 0,

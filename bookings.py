@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from data import load_data_from_file, save_data_to_file, update_data, delete_data
-from rooms import update_room_status
+from rooms import update_room_status, room_types
 
 
 def book_room(user_id: int, room_id: int, check_in: str, check_out: str):
@@ -32,7 +32,7 @@ def book_room(user_id: int, room_id: int, check_in: str, check_out: str):
 		        or check_in_date >= datetime.strptime(booking["check_out"], "%d-%m-%Y").date()):
 			print("Номер занят на указанные даты.")
 			return
-
+	if load_data_from_file('bookings', param_key='all') is not None:
 		booking_id = load_data_from_file(file_name='bookings', param_key='id') + 1
 	else:
 		booking_id = 1
@@ -47,8 +47,7 @@ def book_room(user_id: int, room_id: int, check_in: str, check_out: str):
 
 	user = load_data_from_file(file_name='users', param_key='id', param_value=user_id)
 	room = load_data_from_file(file_name="rooms", param_key='id', param_value=room_id)
-	# print(user['bookings'] + 1)
-	# return
+
 	update_data(file_name='users', obj_id=user_id, param_key='bookings', new_param_value=user['bookings'] + 1)
 
 	if room["status"] == 0:
@@ -64,9 +63,6 @@ def cancel_booking(booking_id):
 	if booking is not None:
 		user = load_data_from_file(file_name='users', param_key='id', param_value=booking['user_id'])
 
-
-
-
 		update_data(file_name='users', obj_id=booking['user_id'], param_key='bookings',
 		            new_param_value=user['bookings'] - 1)
 
@@ -77,5 +73,33 @@ def cancel_booking(booking_id):
 	else:
 		print(f"Booking with ID {booking_id} doesn't exist.")
 		return
+
+
 def view_bookings(user_id=None):
-	pass
+	if user_id is None:
+		bookings = load_data_from_file(file_name='bookings', param_key='all')
+
+		print("Все бронированные номера:")
+		for booking in bookings:
+			user = load_data_from_file(file_name='users', param_key='id', param_value=booking['user_id'])
+			print(
+				f"ID: {booking['id']}, "
+				f"Комната с номером: {booking['room_id']}, "
+				f"Имя гостя: {user['first_name']} {user['last_name']} "
+				f"На период с {booking['check_in']} до {booking['check_out']}")
+		return
+
+	user = load_data_from_file(file_name='users', param_key='id', param_value=user_id)
+	print(f"Все бронированные номера пользователя: {user['first_name']} {user['last_name']}")
+	bookings = load_data_from_file(file_name='bookings', param_key='user_id', param_value=user_id, quantity='all')
+
+	for booking in bookings:
+		room = load_data_from_file(file_name="rooms", param_key='id', param_value=booking['room_id'])
+		print(
+			f"ID: {booking['id']}, "
+			f"Комната с номером: {booking['room_id']}, "
+			f"Тип комнаты {room_types[room['type']]} "
+			f"На период с {booking['check_in']} до {booking['check_out']}")
+
+	return
+

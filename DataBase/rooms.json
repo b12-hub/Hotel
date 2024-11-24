@@ -2,7 +2,7 @@
     {
         "id": 1,
         "type": "standard_double_room",
-        "status": 0,
+        "status": 1,
         "floor": 1
     },
     {
@@ -14,19 +14,19 @@
     {
         "id": 4,
         "type": "standard_double_room",
-        "status": 0,
+        "status": 1,
         "floor": 1
     },
     {
         "id": 5,
         "type": "standard_double_room",
-        "status": 0,
+        "status": 1,
         "floor": 1
     },
     {
         "id": 6,
         "type": "standard_double_room",
-        "status": 0,
+        "status": 1,
         "floor": 1
     },
     {
@@ -44,7 +44,7 @@
     {
         "id": 9,
         "type": "standard_double_room",
-        "status": 0,
+        "status": 1,
         "floor": 1
     },
     {

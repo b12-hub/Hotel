@@ -23,7 +23,7 @@
         "email": "jhon12883@gmail.com",
         "password": "import123",
         "user_type": "guest",
-        "bookings": 1
+        "bookings": 8
     },
     {
         "id": 4,
@@ -33,5 +33,15 @@
         "email": "jhon122883@gmail.com",
         "password": "import123",
         "user_type": "director"
+    },
+    {
+        "id": 5,
+        "username": "testname",
+        "first_name": "Hello",
+        "last_name": "World",
+        "email": "jasldfkj@gmail.com",
+        "password": "import123",
+        "user_type": "guest",
+        "bookings": 0
     }
 ]

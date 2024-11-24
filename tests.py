@@ -23,7 +23,9 @@ from data import *
 # print(load_data_from_file('rooms', param_key='type', param_value='standard_double_room', ))
 
 """ bookings.py """
-book_room(3,2, '23-11-2024', '30-11-2024')
+book_room(3,4, '12-11-2024', '23-11-2024')
 # cancel_booking(1)
+# view_bookings(3)
+
 
 # You can choose from these: standard_single_room, standard_double_room, deluxe_single_room, deluxe_double_room, presidential_room
